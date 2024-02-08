@@ -25,6 +25,7 @@ router.post('/verifyuser', (req, res) => {
             res.send(response);
         }
         else {
+
             response = {
                 success: true,
                 errors: null
@@ -88,6 +89,7 @@ router.post('/login', (req, res) => {
         };
 
         if (err === false) {
+            //console.log("verifying details");
             let token = jwtHandler.generateToken(result);
             response.token = token;
         }

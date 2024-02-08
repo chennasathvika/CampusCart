@@ -18,7 +18,7 @@ require('dotenv').config();
 
 mongoose.Promise = global.Promise;
 
-const mongodb_uri = process.env.NODE_ENV ? process.env.MONGODB_URI : "mongodb://localhost/mydb";
+const mongodb_uri = process.env.NODE_ENV ? process.env.MONGODB_URI : "mongodb://localhost:27017/mydb";
 
 mongoose.connect(mongodb_uri, { useNewUrlParser: true })
     .catch(err => console.error(err));
